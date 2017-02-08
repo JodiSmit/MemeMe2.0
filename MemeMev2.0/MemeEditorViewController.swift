@@ -147,6 +147,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         return memedImage
     }
     
+    //MARK: Save meme to array in AppDelegate
     func saveMeme() {
         let meme = SavedMeme(savedTop: topText.text!, savedBottom: bottomText.text!, origImage: imagePickerView.image!, memedImage: memedImage)
         let object = UIApplication.shared.delegate

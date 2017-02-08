@@ -38,9 +38,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
         let meme = memes[indexPath.row]
         let cell = memeTableView.dequeueReusableCell(withIdentifier: "MemeTableCell") as! MemeTableCell
             
-        cell.memeLabel.text = "\(meme.savedTop) ... \(meme.savedBottom)"
         cell.memeImage.image = meme.memedImage
-        
         return cell
             
     }
@@ -51,23 +49,14 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
             self.memeTableView.reloadData()
         }
     }
-    
-    /*//MARK: Segue
-    let SegueToMemeEdit = "segueToMemeEdit"
-    let SegueToMemeDetail = "segueToMemeDetail"
-    
-    
+
+
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == SegueToMemeEdit {
-            if let destination = segue.destination as? UINavigationController, let MemeEditorViewController = destination.topViewController as? MemeEditorViewController {
-                MemeEditorViewController.delegate = self
-            }
-        } else if segue.identifier == SegueToMemeDetail {
             if let destination = segue.destination as? MemeDetailViewController, let indexPath = memeTableView.indexPathForSelectedRow {
                 let selectedCell = memes[indexPath.row]
                 destination.meme = selectedCell
             }
         }
-    }*/
+
 }

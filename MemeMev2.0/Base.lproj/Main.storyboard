@@ -136,7 +136,7 @@
         <scene sceneID="WwY-sX-FWG">
             <objects>
                 <collectionViewController id="9WT-sn-Nkz" customClass="SentMemesCollectionViewController" customModule="MemeMev2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="01x-YV-EEL">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="01x-YV-EEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,8 +154,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="143" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qen-0k-aM4">
-                                            <rect key="frame" x="0.0" y="-17" width="143" height="149"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qen-0k-aM4" userLabel="memeImage">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="149"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -338,6 +338,6 @@
         <image name="tableview" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gse-nq-QvL"/>
+        <segue reference="KRU-1T-OP5"/>
     </inferredMetricsTieBreakers>
 </document>
