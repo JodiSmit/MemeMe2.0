@@ -22,6 +22,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
         super.viewWillAppear(animated)
         
         tabBarController?.tabBar.isHidden = false
+        
         memeTableView.reloadData()
         
     }
