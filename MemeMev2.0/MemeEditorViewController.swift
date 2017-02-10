@@ -69,10 +69,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        imagePickerView.image = nil
-        topText.text = "TOP"
-        bottomText.text = "BOTTOM"
-        shareButton.isEnabled = false
+        self.dismiss(animated: true, completion: nil)
+        //imagePickerView.image = nil
+        //topText.text = "TOP"
+        //bottomText.text = "BOTTOM"
+        //shareButton.isEnabled = false
     }
     
     

@@ -20,7 +20,6 @@
 		63E1B5401E401507004C5BC5 /* MemeMev2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1B53F1E401507004C5BC5 /* MemeMev2_0UITests.swift */; };
 		63E1B54E1E4015FA004C5BC5 /* SavedMeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1B54D1E4015FA004C5BC5 /* SavedMeme.swift */; };
 		63E1B5501E401647004C5BC5 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63E1B54F1E401647004C5BC5 /* impact.ttf */; };
-		63E1B5521E40167C004C5BC5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63E1B5511E40167C004C5BC5 /* Info.plist */; };
 		63E1B5541E4251E4004C5BC5 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1B5531E4251E4004C5BC5 /* SentMemesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -260,7 +259,6 @@
 				63E1B5501E401647004C5BC5 /* impact.ttf in Resources */,
 				63E1B52A1E401507004C5BC5 /* LaunchScreen.storyboard in Resources */,
 				63E1B5271E401507004C5BC5 /* Assets.xcassets in Resources */,
-				63E1B5521E40167C004C5BC5 /* Info.plist in Resources */,
 				63E1B5251E401507004C5BC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

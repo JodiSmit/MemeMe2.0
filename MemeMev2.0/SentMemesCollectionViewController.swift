@@ -23,7 +23,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     //MARK: Bring saved meme detail to Collection View
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let meme = memes[indexPath.row]
+        let meme = memes[(indexPath).item]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionCell", for: indexPath) as! MemeCollectionCell
         
         cell.memeImage.image = meme.memedImage
@@ -43,11 +43,17 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
-        detailController.meme = self.memes[(indexPath as NSIndexPath).row]
+        detailController.meme = self.memes[(indexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+        collectionView?.reloadData()
+        
+    }
         
     //MARK: Configure layout of collection view. UPDATE LATER IF NECESSARY!!
     override func viewDidLoad() {

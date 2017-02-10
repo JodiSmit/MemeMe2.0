@@ -9,10 +9,7 @@
 import Foundation
 import UIKit
 
-class SentMemesTableViewController: UIViewController, UITableViewDataSource {
-    
-    
-    @IBOutlet weak var memeTableView: UITableView!
+class SentMemesTableViewController: UITableViewController{
     
     var memes: [SavedMeme] {
         return (UIApplication.shared.delegate as! AppDelegate).memes
@@ -20,43 +17,33 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tabBarController?.tabBar.isHidden = false
-        
-        memeTableView.reloadData()
+        tableView.reloadData()
         
     }
     
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
     
     //MARK: Bring saved meme detail to tableview
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
-        let meme = memes[indexPath.row]
-        let cell = memeTableView.dequeueReusableCell(withIdentifier: "MemeTableCell") as! MemeTableCell
-            
-        cell.memeImage.image = meme.memedImage
+        let meme = memes[indexPath.row] as SavedMeme!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableCell") as! MemeTableCell
+        cell.memeImage.image = meme?.memedImage
+        cell.memeLabel.text = (meme?.savedTop)! + "..." + (meme?.savedBottom)!
         return cell
             
     }
-    
-    //MARK: Dismiss VC
-    func dismissMemeEditViewController() {
-        dismiss(animated: true) {
-            self.memeTableView.reloadData()
-        }
-    }
 
-
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-            if let destination = segue.destination as? MemeDetailViewController, let indexPath = memeTableView.indexPathForSelectedRow {
-                let selectedCell = memes[indexPath.row]
-                destination.meme = selectedCell
-            }
-        }
-
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        detailController.meme = self.memes[(indexPath as NSIndexPath).row]
+        self.navigationController!.pushViewController(detailController, animated: true)
+        
+    }
+    
 }
