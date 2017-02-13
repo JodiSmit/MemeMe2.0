@@ -140,12 +140,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="143" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qen-0k-aM4" userLabel="memeImage">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qen-0k-aM4" userLabel="memeImage">
                                             <rect key="frame" x="0.0" y="0.0" width="143" height="132"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="qen-0k-aM4" firstAttribute="leading" secondItem="bdq-Bz-Jsi" secondAttribute="leading" id="ECB-BE-tuF"/>
+                                    <constraint firstItem="qen-0k-aM4" firstAttribute="top" secondItem="bdq-Bz-Jsi" secondAttribute="top" id="EXc-7p-Xcq"/>
+                                    <constraint firstAttribute="bottom" secondItem="qen-0k-aM4" secondAttribute="bottom" id="fYx-Wh-haM"/>
+                                    <constraint firstAttribute="trailing" secondItem="qen-0k-aM4" secondAttribute="trailing" id="kjg-WD-dsp"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="memeImage" destination="qen-0k-aM4" id="jyZ-Uy-gYD"/>
                                 </connections>
@@ -183,8 +188,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="2CF-Xs-Stj">
-                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="2CF-Xs-Stj">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-XM-hhb">
@@ -240,21 +245,21 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3CJ-wL-GTb" firstAttribute="top" secondItem="KGf-lo-9Mr" secondAttribute="bottom" constant="12" id="2uG-lu-QHh"/>
-                            <constraint firstItem="KGf-lo-9Mr" firstAttribute="trailing" secondItem="2CF-Xs-Stj" secondAttribute="trailing" id="3Wq-Sq-qJY"/>
+                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="trailing" secondItem="H2p-XM-hhb" secondAttribute="trailing" id="4d6-A9-dJ1"/>
+                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="trailing" secondItem="KGf-lo-9Mr" secondAttribute="trailing" id="A9t-Ih-eLG"/>
                             <constraint firstItem="H2p-XM-hhb" firstAttribute="top" secondItem="bnT-yc-ohu" secondAttribute="bottom" constant="17" id="BGW-Ih-Lz7"/>
+                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="top" secondItem="KGf-lo-9Mr" secondAttribute="top" id="E4E-yi-xxX"/>
+                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="leading" secondItem="KGf-lo-9Mr" secondAttribute="leading" id="HFx-fE-0rT"/>
                             <constraint firstItem="3CJ-wL-GTb" firstAttribute="leading" secondItem="R4d-fu-yq5" secondAttribute="leadingMargin" id="KFU-kW-QGe"/>
                             <constraint firstItem="KGf-lo-9Mr" firstAttribute="leading" secondItem="H2p-XM-hhb" secondAttribute="leading" id="Ske-Ub-lKt"/>
-                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="leading" secondItem="KGf-lo-9Mr" secondAttribute="leading" id="T8Q-X1-jNL"/>
                             <constraint firstItem="H2p-XM-hhb" firstAttribute="bottom" secondItem="TK0-pG-N6N" secondAttribute="top" id="UIT-xV-IZp"/>
                             <constraint firstItem="KGf-lo-9Mr" firstAttribute="top" secondItem="R4d-fu-yq5" secondAttribute="top" constant="28" id="UfS-ly-MBA"/>
-                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="top" secondItem="KGf-lo-9Mr" secondAttribute="top" constant="44" id="b98-TF-E4d"/>
-                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="trailing" secondItem="H2p-XM-hhb" secondAttribute="trailing" id="b9G-Gg-arL"/>
                             <constraint firstItem="3CJ-wL-GTb" firstAttribute="leading" secondItem="bnT-yc-ohu" secondAttribute="leading" id="bUN-Zt-epX"/>
+                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="bottom" secondItem="TK0-pG-N6N" secondAttribute="top" id="iOV-3K-X0d"/>
                             <constraint firstItem="3CJ-wL-GTb" firstAttribute="trailing" secondItem="bnT-yc-ohu" secondAttribute="trailing" id="myU-p5-YkS"/>
                             <constraint firstAttribute="trailing" secondItem="KGf-lo-9Mr" secondAttribute="trailing" id="pUz-it-MpR"/>
                             <constraint firstItem="bnT-yc-ohu" firstAttribute="centerX" secondItem="H2p-XM-hhb" secondAttribute="centerX" id="uKq-WQ-ckT"/>
                             <constraint firstItem="KGf-lo-9Mr" firstAttribute="leading" secondItem="R4d-fu-yq5" secondAttribute="leading" id="xUL-1q-HJ5"/>
-                            <constraint firstItem="2CF-Xs-Stj" firstAttribute="bottom" secondItem="TK0-pG-N6N" secondAttribute="top" id="zHg-w3-OIJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -270,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiE-H2-VpR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="-1388"/>
+            <point key="canvasLocation" x="1037.5999999999999" y="-1388.4557721139431"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="F8u-wk-ySV">
@@ -284,31 +289,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLV-Ba-k0u">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="WMa-j0-shT" userLabel="Meme Me v2.0">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="3cR-yI-EBZ">
-                                            <connections>
-                                                <action selector="shareButtonPressedWithSender:" destination="bDJ-uT-kdV" id="h5B-so-lSf"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="9gN-pg-H8t">
-                                            <connections>
-                                                <action selector="cancelButtonPressed:" destination="bDJ-uT-kdV" id="D5j-TH-Xvc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="247" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-GX-DQE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="595"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-GX-DQE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HgN-GX-DQE" firstAttribute="leading" secondItem="S4c-A5-3kV" secondAttribute="leading" id="58a-oc-qXL"/>
+                            <constraint firstItem="HgN-GX-DQE" firstAttribute="top" secondItem="S4c-A5-3kV" secondAttribute="top" id="EVf-nq-G5f"/>
+                            <constraint firstAttribute="trailing" secondItem="HgN-GX-DQE" secondAttribute="trailing" id="RGC-Kg-xqs"/>
+                            <constraint firstItem="HgN-GX-DQE" firstAttribute="bottom" secondItem="Jam-SE-vuL" secondAttribute="top" id="v95-TD-7aL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="memeView" destination="HgN-GX-DQE" id="Z5K-fe-9Wc"/>
@@ -316,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEy-I2-cGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="-709"/>
+            <point key="canvasLocation" x="1028" y="-709.29535232383819"/>
         </scene>
     </scenes>
     <resources>
@@ -324,6 +316,6 @@
         <image name="tableview" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bhS-ar-RoV"/>
+        <segue reference="KRU-1T-OP5"/>
     </inferredMetricsTieBreakers>
 </document>

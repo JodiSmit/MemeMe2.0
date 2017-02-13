@@ -19,7 +19,8 @@ class MemeDetailViewController: UIViewController, UIApplicationDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.reloadInputViews()
-        self.memeView!.image = UIImage(named: "\(meme.memedImage)")
+        self.memeView!.image = meme.memedImage
+        self.memeView!.contentMode = .scaleAspectFit
         self.tabBarController?.tabBar.isHidden = true
     }
     

@@ -70,14 +70,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        //imagePickerView.image = nil
-        //topText.text = "TOP"
-        //bottomText.text = "BOTTOM"
-        //shareButton.isEnabled = false
     }
     
-    
-    
+       
     //MARK: Function to use either photolibrary or camera in IBActions above.
     func pickImage(sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
